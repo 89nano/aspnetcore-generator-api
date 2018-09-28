@@ -10,7 +10,7 @@ services:
             - 8111:8111
     teamcity-agent:
         image: aspnetcore/teamcity-agent-with-compose:2018.1.2
-        build: ./agent
+        build: ./agent #Specify path to agent folder to Dockerfile
         environment:
             SERVER_URL: http://teamcity:8111
         volumes:
